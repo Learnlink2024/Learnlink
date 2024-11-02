@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - LearnLink</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to <span class="highlight">Learn</span><span class="highlight-secondary">Link</span></h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="password" required>
+        <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword"></i>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <div class="forgot-password">
+      <a href="#">Forgot password?</a>
+    </div>
+    <p class="signup-text">Don't have an account? <a href="#">Sign Up</a></p>
+  </div>
+  <script src="pages/login/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "electron-react-boilerplate",
+  "version": "4.6.0",
+  "description": "A foundation for scalable desktop apps",
+  "license": "MIT",
+  "author": {
+    "name": "Electron React Boilerplate Maintainers",
+    "email": "electronreactboilerplate@gmail.com",
+    "url": "https://github.com/electron-react-boilerplate"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "start": "npm run dev",                              
+    "dev": "concurrently \"npm run start:main\" \"npm run start:renderer\"",  
+    "start:main": "webpack --config ./webpack.main.config.js --watch",   
+    "start:renderer": "webpack-dev-server --config ./webpack.renderer.config.js",  
+    "build": "npm run build:main && npm run build:renderer",  
+    "build:main": "webpack --config ./webpack.main.config.js",  
+    "build:renderer": "webpack --config ./webpack.renderer.config.js",  
+    "electron:prod": "electron .",    
+    "rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js", 
+    "postinstall": "npm run rebuild && npm run link-modules",  
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
+  },
+  "dependencies": {}
+}
